@@ -1,0 +1,114 @@
+:root {
+  --header-footer: #030712;
+  --aside: #f3f4f6;
+  --main: #e5e7eb;
+  --title-links: #1f2937;
+  --title-header-footer: #f3f4f6;
+  --paragraph: #374151;
+  --button: #0284c7;
+  --text-button: #ffffff;
+}
+
+body {
+  margin: 0;
+
+  color: var(--text-button);
+
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  display: grid;
+
+  height: 100vh;
+
+  grid-template-rows: 100px 1fr 100px;
+  grid-template-columns: 300px 1fr;
+
+  grid-template-areas:
+    "header header header"
+    "aside main main"
+    "footer footer footer";
+}
+
+header {
+  background-color: var(--header-footer);
+  grid-area: header;
+
+  padding: 31px 24px;
+}
+
+aside {
+  background-color: var(--aside);
+  grid-area: aside;
+}
+
+aside ul {
+  margin-top: 130px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+aside ul li {
+  list-style: none;
+}
+
+aside ul li a {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--title-links);
+  text-decoration: none;
+}
+
+main {
+  background-color: var(--main);
+  grid-area: main;
+
+  display: grid;
+
+  place-content: center;
+
+  padding-inline: 24px;
+}
+
+main .text-content {
+  max-width: 550px;
+}
+
+main .text-content h1 {
+  font-size: 48px;
+  font-weight: 400;
+  color: var(--title-links);
+}
+
+main .text-content p {
+  color: var(--paragraph);
+  font-weight: 300;
+  line-height: 28px;
+}
+
+main .text-content button {
+  width: 181px;
+  height: 53px;
+  border-radius: 6px;
+  border: none;
+  background-color: var(--button);
+  color: var(--text-button);
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+main .text-content button:hover {
+  filter: brightness(0.7);
+}
+
+footer {
+  background-color: var(--header-footer);
+  grid-area: footer;
+
+  display: grid;
+  place-content: center;
+}

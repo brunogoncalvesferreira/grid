@@ -1,0 +1,32 @@
+@media (max-width: 768px) {
+  .container {
+    grid-template-rows: 100px 80px 1fr 40px;
+
+    grid-template-areas:
+      "header header header"
+      "aside aside aside"
+      "main main main"
+      "footer footer footer";
+  }
+
+  aside ul {
+    margin-top: 35px;
+    flex-direction: row;
+
+    gap: 30px;
+
+    justify-content: center;
+  }
+
+  aside ul li a {
+    font-size: 18px;
+  }
+
+  main {
+    padding-bottom: 90px;
+  }
+
+  main .text-content {
+    text-align: center;
+  }
+}
